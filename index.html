@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Auxílio-Acidente INSS | Édio Germano ERN</title>
+  <link rel="icon" type="image/png" href="../EdioGermanoErnAdvocacia/assets/logo/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <style>
@@ -43,6 +44,207 @@
       max-width: 900px;
       margin: 0 auto;
       padding: 0 24px;
+    }
+
+    /* ===== TEAM SECTION ===== */
+    .team {
+      background: var(--bg-page);
+      padding: 52px 0 56px;
+    }
+
+    /* Lead card */
+    .team__lead-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 36px;
+    }
+
+    .team__lead-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      padding: 28px 36px;
+      max-width: 640px;
+      width: 100%;
+      border-top: 3px solid var(--green-dark);
+    }
+
+    .team__lead-photo-wrap {
+      flex-shrink: 0;
+    }
+
+    .team__photo--lead {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 15%;
+      border: 3px solid var(--green-dark);
+    }
+
+    .team__photo-fallback--lead {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: var(--green-dark);
+      color: white;
+      font-size: 26px;
+      font-weight: 800;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .team__lead-info {
+      flex: 1;
+    }
+
+    .team__lead-name {
+      font-size: 18px;
+      font-weight: 800;
+      color: #1a1a1a;
+      margin-bottom: 2px;
+    }
+
+    .team__role--lead {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--green-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 12px;
+    }
+
+    .team__lead-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .team__lead-list li {
+      font-size: 13px;
+      color: #444;
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      line-height: 1.4;
+    }
+
+    .team__lead-list li::before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      background: var(--green-dark);
+      border-radius: 50%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+      background-size: 11px;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-top: 1px;
+    }
+
+    /* Grid cards */
+    .team__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .team__card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+      padding: 24px 16px 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      border-top: 3px solid var(--green-dark);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .team__card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+
+    .team__photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 15%;
+      border: 2px solid var(--green-dark);
+      margin-bottom: 12px;
+    }
+
+    .team__photo-fallback {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--green-dark);
+      color: white;
+      font-size: 20px;
+      font-weight: 800;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .team__name {
+      font-size: 14px;
+      font-weight: 800;
+      color: #1a1a1a;
+      margin-bottom: 3px;
+    }
+
+    .team__role {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--green-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+
+    .team__role--automation {
+      color: #b45309;
+    }
+
+    .team__desc {
+      font-size: 12px;
+      color: #555;
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .team__lead-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 20px;
+      }
+
+      .team__lead-list li {
+        justify-content: center;
+      }
+
+      .team__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .team__grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* ===== HEADER / LOGO BAR ===== */
@@ -106,7 +308,7 @@
       position: absolute;
       top: 0; right: 0; bottom: 0;
       width: 50%;
-      background-image: url('./acidentado.png');
+      background-image: url('../EdioGermanoErnAdvocacia/assets/imgs/acidentado.png');
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
@@ -792,7 +994,7 @@
   <!-- ===== LOGO BAR ===== -->
   <div class="logo-bar">
     <div class="logo-bar__inner">
-      <img src="./logotipo.png" alt="Logotipo Édio Germano ERN" style="height: 42px; width: auto; flex-shrink: 0;" />
+      <img src="../EdioGermanoErnAdvocacia/assets/logo/logotipo.png" alt="Logotipo Édio Germano ERN" style="height: 42px; width: auto; flex-shrink: 0;" />
       <div class="logo-text-wrap">
         <span class="logo-name">ÉDIO GERMANO ERN</span>
         <span class="logo-sub">Sociedade Individual de Advocacia</span>
@@ -910,7 +1112,7 @@
           <h2 class="trust__title">POR QUE CONFIAR?</h2>
           <div class="trust__card">
             <div class="trust__card-top">
-              <img src="./Édio Ern - Sem fundo 2.png" alt="Advogado Édio Germano" class="trust__card-image" />
+              <img src="../EdioGermanoErnAdvocacia/assets/imgs/edio.png" alt="Advogado Édio Germano" class="trust__card-image" />
               <div class="trust__card-content">
                 <ul class="trust__list">
                   <li>
@@ -1003,6 +1205,97 @@
             </div>
 
           </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EQUIPE ===== -->
+  <section class="team">
+    <div class="container">
+      <h2 class="section__title">NOSSA EQUIPE</h2>
+
+      <!-- Dr. Édio — destaque -->
+      <div class="team__lead-wrap">
+        <div class="team__lead-card">
+          <div class="team__lead-photo-wrap">
+            <img src="../EdioGermanoErnAdvocacia/assets/cards_equipe/edio.jpeg" alt="Dr. Édio Germano Ern" class="team__photo team__photo--lead" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="team__photo-fallback team__photo-fallback--lead">EG</div>
+          </div>
+          <div class="team__lead-info">
+            <div class="team__lead-name">Dr. Édio Germano Ern</div>
+            <div class="team__role team__role--lead">Advogado</div>
+            <p class="team__desc" style="text-align:left;">Condução estratégica dos processos · Atuação em Direito Previdenciário, Indenizatório e Securitário · Defesa dos direitos dos clientes com técnica e comprometimento</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grade de membros -->
+      <div class="team__grid">
+
+        <div class="team__card">
+          <img src="../EdioGermanoErnAdvocacia/assets/cards_equipe/juliano.jpg" alt="Juliano Arruda" class="team__photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="team__photo-fallback">JA</div>
+          <div class="team__name">Juliano Arruda</div>
+          <div class="team__role">Assistente Jurídico</div>
+          <p class="team__desc">Atendimento aos clientes em Curitiba, acolhimento inicial, organização documental, elaboração de petições e suporte logístico às perícias de assistência técnica.</p>
+        </div>
+
+        <div class="team__card">
+          <img src="../EdioGermanoErnAdvocacia/assets/cards_equipe/talita.jpeg" alt="Talita Andreolla" class="team__photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="team__photo-fallback">TA</div>
+          <div class="team__name">Talita Andreolla</div>
+          <div class="team__role">Assistente Jurídico</div>
+          <p class="team__desc">Suporte direto aos processos, organização documental, acompanhamento de demandas e controle e fluidez dos casos.</p>
+        </div>
+
+        <div class="team__card">
+          <img src="../EdioGermanoErnAdvocacia/assets/cards_equipe/clara.png" alt="Clara" class="team__photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="team__photo-fallback">CL</div>
+          <div class="team__name">Clara</div>
+          <div class="team__role">Assistente Virtual de Atendimento</div>
+          <p class="team__desc">Primeiro contato com clientes, orientações iniciais, triagem de informações, direcionamento de demandas e acompanhamento de atendimentos.</p>
+        </div>
+
+        <div class="team__card">
+          <img src="../EdioGermanoErnAdvocacia/assets/cards_equipe/sofia.png" alt="Sofia" class="team__photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="team__photo-fallback">SO</div>
+          <div class="team__name">Sofia</div>
+          <div class="team__role">Assistente Virtual</div>
+          <p class="team__desc">Organização de informações jurídicas, padronização e revisão de documentos, suporte estratégico às rotinas e apoio administrativo.</p>
+        </div>
+
+        <div class="team__card">
+          <img src="../EdioGermanoErnAdvocacia/assets/cards_equipe/isadora.jpeg" alt="Isadora Cauzzi" class="team__photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="team__photo-fallback">IC</div>
+          <div class="team__name">Isadora Cauzzi</div>
+          <div class="team__role">Assistente Jurídico</div>
+          <p class="team__desc">Cadastro e atualização de processos, controle de prazos, auxílio na elaboração de petições, revisão de documentos e agendamento de audiências e perícias.</p>
+        </div>
+
+        <div class="team__card">
+          <img src="../EdioGermanoErnAdvocacia/assets/cards_equipe/isabella.jpeg" alt="Isabella Marin" class="team__photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="team__photo-fallback">IM</div>
+          <div class="team__name">Isabella Marin</div>
+          <div class="team__role">Assistente Jurídico</div>
+          <p class="team__desc">Cadastro e atualização de processos, controle de prazos, elaboração de petições, revisão de documentos e agendamento de audiências e perícias.</p>
+        </div>
+
+        <div class="team__card">
+          <img src="../EdioGermanoErnAdvocacia/assets/cards_equipe/renan.jpg" alt="Renan Ferneda" class="team__photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="team__photo-fallback">RF</div>
+          <div class="team__name">Renan Ferneda</div>
+          <div class="team__role">Advogado</div>
+          <p class="team__desc">Condução estratégica das demandas trabalhistas, análise técnica, elaboração de peças processuais e atuação em audiências e negociações.</p>
+        </div>
+
+        <div class="team__card">
+          <img src="../EdioGermanoErnAdvocacia/assets/cards_equipe/rafael.jpeg" alt="Rafael Costa" class="team__photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="team__photo-fallback">RC</div>
+          <div class="team__name">Rafael Costa</div>
+          <div class="team__role team__role--automation">Automação Jurídica</div>
+          <p class="team__desc">Desenvolvimento de assistentes virtuais, automação de fluxos de atendimento, integração de ferramentas e monitoramento do funil de novos clientes.</p>
         </div>
 
       </div>
